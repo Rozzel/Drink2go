@@ -1,1 +1,7 @@
-/* здесь подключите шрифты*/
+@font-face {
+  @include font($font-name, $font-url);
+}
+
+@font-face {
+  @include font($font-name, $font-url--bold, 700);
+}
