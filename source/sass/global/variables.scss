@@ -1,6 +1,20 @@
+// font
 $font-name: "Montserrat";
 $specify-families: "Arial", sans-serif;
 $font-url: montserrat-regular;
 $font-url--bold: montserrat-bold;
 
-$base-color: #333333;
+// colors
+$color__base--black: #333333;
+$color__base--white: #ffffff;
+$color__base--grey: #bdbdbd;
+$color__base--primary: #7859cf;
+$color__base--secondary: #f0ebff;
+$color__alt--primary-opacity: rgba(120, 89, 207, 0.25);
+$color__alt--primary-lighter: #9070ec;
+$color__alt--primary-darker: #593cac;
+$color__alt--light-grey: #e2e2e2;
+$color__bg--lightest-grey: #f8f8f8;
+$color__bg--flat-white: #f3ebe1;
+$color__bg--lavender-latte: #eae6fc;
+$color__bg--espresso: #e5e6e8;
