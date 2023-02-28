@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Интернет-магазин кофейных напитков</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css?v=cache">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <main>
-      
-      <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>Интернет-магазин кофейных напитков</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css?v=cache">
+</head>
 
-      <section class="slider">
-        
-      </section>
+<body class="page__body">
+  <header class="header">Шапка</header>
 
-    </main>
+  <main class="main">
 
-    <footer></footer>
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-    <script src="./js/script.js?v=cache" defer></script>
-  </body>
+    <section class="slider">
+      <h2 class="slider__title visually-hidden">Новинки кофейных напитков</h2>
+      <div class="slider__wrapper">
+        <div class="slider__list">
+          <div class="slider__slide">
+            <img src="" alt="" class="slider__img">
+            <p class="slider__new"></p>
+            <p class="slider__title"></p>
+            <p class="slider__text"></p>
+            <div class="slider__order">
+              <p class="slider__price"></p>
+              <button class="button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <button class="slider__button slider__button-prev slider__button__arrow" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="slider__button slider__button-next slider__button__arrow slider__button__arrow--right" type="button" aria-label="Следующий слайд"></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">Подвал</footer>
+
+  <script src="./js/script.js?v=cache" defer></script>
+</body>
+
 </html>
