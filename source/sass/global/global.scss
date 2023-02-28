@@ -1,1 +1,7 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
+body {
+  @include font-global($font-name);
+}
+
+.visually-hidden {
+    @include visually-hidden();
+  }

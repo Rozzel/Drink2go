@@ -8,3 +8,23 @@
     display: swap;
   }
 }
+
+@mixin font-global($font) {
+  font: {
+    family: $font, $specify-families;
+    style: normal;
+    weight: normal;
+    size: 15px;
+  }
+  line-height: 24px;
+  color: $base-color;
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
