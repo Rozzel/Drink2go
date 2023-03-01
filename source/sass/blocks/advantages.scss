@@ -1,0 +1,13 @@
+.advantages {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.advantages__wrapper {
+    @include size-width($mobile-size, $mobile-indent, max);
+}
+
+.advantages__list {
+    @include indent(list);
+}
