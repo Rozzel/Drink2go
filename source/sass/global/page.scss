@@ -4,12 +4,14 @@
 
 .page__body {
   @include font-global($font-name);
-  @include indent();
+  @include indent;
   display: flex;
   flex-direction: column;
   min-width: $mobile-size--min;
   min-height: 100%;
+  background-color: $color__base--white;
 }
+
 .page__main {
   flex-grow: 1;
 }
