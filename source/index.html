@@ -15,29 +15,43 @@
 
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-    <section class="slider visually-hidden">
+    <section class="slider">
       <h2 class="visually-hidden">Новинки кофейных напитков</h2>
       <div class="slider__wrapper">
         <div class="slider__list">
           <div class="slider__slide">
-            <img src="" alt="" class="slider__img">
-            <p class="slider__new"></p>
-            <p class="slider__title"></p>
-            <p class="slider__text"></p>
+            <div class="slider__img">
+              <picture>
+                <!-- <source type="image/webp" media="(min-width: 1150px)" srcset="img/catalog/triple-desktop.webp 1x, img/catalog/triple-desktop@2x.webp 2x"> -->
+                <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/triple-tablet.webp 1x, img/catalog/triple-tablet@2x.webp 2x"> -->
+                <source type="image/webp" srcset="img/slider/flat-white--mobile.webp 1x, img/slider/flat-white--mobile@2x.webp 2x">
+                <!-- <source media="(min-width: 1150px)" srcset="img/catalog/triple-desktop.jpg 1x, img/catalog/triple-desktop@2x.jpg 2x"> -->
+                <!-- <source media="(min-width: 768px)" srcset="img/catalog/triple-tablet.jpg 1x, img/catalog/triple-tablet@2x.jpg 2x"> -->
+                <img src="img/slider/flat-white--mobile.png" srcset="img/slider/flat-white--mobile@2x.png 2x" loading="lazy" alt="Декаф Флэт Уайт" width="280" height="280">
+              </picture>
+            </div>
+            <p class="slider__new">Новинка!</p>
+            <p class="slider__title">Декаф Флэт<br>Уайт</p>
+            <p class="slider__text">
+              Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня
+            </p>
             <div class="slider__order">
-              <p class="slider__price"></p>
-              <button class="button"></button>
+              <p class="slider__price">
+                <span class="slider__price-old">295₽</span>
+                <span class="slider__price-new">225₽</span>
+              </p>
+              <button class="button slider__button">Заказать</button>
             </div>
           </div>
         </div>
-        <div class="slider__controls">
-          <button class="slider__button slider__button-prev slider__button__arrow" type="button" aria-label="Предыдущий слайд"></button>
-          <button class="slider__button slider__button-next slider__button__arrow slider__button__arrow--right" type="button" aria-label="Следующий слайд"></button>
+        <div class="slider__controls visually-hidden">
+          <button class="slider__prev slider__arrow" type="button" aria-label="Предыдущий слайд"></button>
+          <button class="slider__next slider__arrow slider__arrow--right" type="button" aria-label="Следующий слайд"></button>
         </div>
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages visually-hidden">
       <div class="wrapper advantages__wrapper">
         <h2 class="advantages__heading">
           Главные причины<br>выбрать Drink2Go</h2>

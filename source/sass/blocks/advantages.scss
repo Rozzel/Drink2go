@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   order: 2;
-  padding-bottom: 36px;
+  margin-bottom: 36px;
 }
 
 .advantages__teg {
@@ -29,7 +29,7 @@
   justify-content: center;
   order: 1;
   text-transform: uppercase;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .advantages__list {
@@ -58,7 +58,7 @@
 .advantages__item-headin {
   @include font-text(700, 18px, 32px);
   @include indent;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .advantages__item-text {

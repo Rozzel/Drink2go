@@ -54,3 +54,8 @@
   }
   padding: 0 $padding;
 }
+
+@mixin size($width, $height: $width) {
+  width: #{$width}px;
+  height: #{$height}px;
+}

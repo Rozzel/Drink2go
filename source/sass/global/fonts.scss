@@ -3,5 +3,9 @@
 }
 
 @font-face {
+  @include font($font-name, $font-url--semibold, 600);
+}
+
+@font-face {
   @include font($font-name, $font-url--bold, 700);
 }

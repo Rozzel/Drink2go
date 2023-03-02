@@ -1,0 +1,9 @@
+.button {
+    @include font-text(400, 16px, 24px, $color__base--white);
+    @include indent;
+    padding: 8px 20px;
+    background: $color__base--primary;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
