@@ -51,6 +51,10 @@
   }
 }
 
+.advantages__icon {
+  margin-bottom: 10px;
+}
+
 .advantages__item-headin {
   @include font-text(700, 18px, 32px);
   @include indent;
