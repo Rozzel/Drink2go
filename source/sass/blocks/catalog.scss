@@ -43,6 +43,7 @@
 .catalog__filters-price {
     display: flex;
     flex-direction: column;
+    margin-bottom: 24px;
 }
 
 .catalog__filters-price-name {
@@ -115,11 +116,49 @@
     }
 }
 
+.catalog__filters-range-inputs {
+  @include indent;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 
+  &::before {
+    @include size(10, 2);
+    content: "";
+    background-color: $color__base--grey;
+    position: absolute;
+    top: 50%;
+    left: 48%;
 
+    @include screen-mobile {
+      left: 50%;
+    }
 
-// .catalog__filters-milk {
-// }
+  }
+}
+
+.catalog__filters-range-input {
+  @include font-text(500, 16px, 24px);
+  @include size(118, 38);
+  text-align: center;
+  background-color: $color__base--white;
+  border: 2px solid $color__alt--primary-lighter;
+border-radius: 4px;
+
+  &::placeholder {
+    color: $color__base--grey;
+  }
+}
+// .catalog__filters-milk
+
+.catalog__filters-milk-name {
+  @include indent;
+  @include font-text(600, 16px, 24px);
+}
+
+.catalog__filters-milk-radios {
+  // TODO  остановился тут
+}
 
 // .catalog__filters-country {
 // }

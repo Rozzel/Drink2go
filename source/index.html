@@ -114,14 +114,18 @@
                 <div class="catalog__filters-range-toggle catalog__filters-range-toggle--min" tabindex="0"></div>
                 <div class="catalog__filters-range-toggle catalog__filters-range-toggle--max" tabindex="0"style="left: 80%;"></div>
               </div>
-              <!-- TODO Остановился тут -->
               <div class="catalog__filters-range-inputs">
-                <input type="text" placeholder="0">
-                <input type="text" placeholder="1000" value="900">
+                <input class="catalog__filters-range-input" type="number" placeholder="0">
+                <input class="catalog__filters-range-input" type="number" placeholder="1000" value="900">
               </div>
             </div>
           </div>
-          <div class="catalog__filters-milk">Наличие молока</div>
+          <div class="catalog__filters-milk">
+            <p class="catalog__filters-milk-name">Наличие молока</p>
+            <fieldset class="catalog__filters-milk-radios">
+              <!-- TODO  остановился тут -->
+            </fieldset>
+          </div>
           <div class="catalog__filters-country">Страна произрастания</div>
           <div class="catalog__filters-buttons">
             <button class="button catalog__filters-button" type="button">Применить фильтр</button>
@@ -134,7 +138,7 @@
             <div class="catalog__products-item">Декаф Флэт Уайт</div>
           </div>
           <div class="catalog__pagination">
-            < 1 2 3>
+            < 1 2 3 >
           </div>
         </div>
       </div>

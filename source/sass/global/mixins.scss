@@ -78,3 +78,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin screen-mobile {
+  @media screen and (min-width: $mobile-size) {
+      @content;
+  }
+}
