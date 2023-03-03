@@ -103,15 +103,21 @@
           <h2 class="catalog__head-heading">Каталог кофейных<br>напитков</h2>
           <p class="catalog__head-name">Каталог</p>
         </div>
-        <div class="catalog__filters">
+        <form class="catalog__filters">
           <div class="catalog__filters-price">
+            <p class="catalog__filters-price-name">Цена</p>
             <div class="catalog__filters-range">
               <div class="catalog__filters-range-controls">
                 <div class="catalog__filters-range-scale">
-                  <div class="catalog__filters-range-bar" style="width: 60%;"></div>
+                  <div class="catalog__filters-range-bar" style="width: 80%;"></div>
                 </div>
                 <div class="catalog__filters-range-toggle catalog__filters-range-toggle--min" tabindex="0"></div>
-                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--max" tabindex="0"style="left: 60%;"></div>
+                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--max" tabindex="0"style="left: 80%;"></div>
+              </div>
+              <!-- TODO Остановился тут -->
+              <div class="catalog__filters-range-inputs">
+                <input type="text" placeholder="0">
+                <input type="text" placeholder="1000" value="900">
               </div>
             </div>
           </div>
@@ -121,7 +127,7 @@
             <button class="button catalog__filters-button" type="button">Применить фильтр</button>
             <button class="button catalog__filters-button" type="button">Сбросить фильтр</button>
           </div>
-        </div>
+        </form>
         <div class="catalog__products">
           <div class="catalog__products-sorting">Сортировка:</div>
           <div class="catalog__products-list">

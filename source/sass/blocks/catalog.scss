@@ -35,7 +35,21 @@
     margin-bottom: 4px;
 }
 
-// ------------------------
+.catalog__filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__filters-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__filters-price-name {
+    @include indent;
+    @include font-text(600, 16px, 24px);
+    margin-bottom: 22px;
+}
 
 .catalog__filters-range-controls {
     position: relative;
@@ -102,14 +116,7 @@
 }
 
 
-// ------------------------
 
-
-// .catalog__filters {
-// }
-
-// .catalog__filters-price {
-// }
 
 // .catalog__filters-milk {
 // }
