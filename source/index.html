@@ -100,24 +100,36 @@
     <section class="catalog">
       <div class="catalog__wrapper">
         <div class="catalog__head">
-          <h1 class="catalog__head-heading"></h1>
-          <p class="catalog__head-name"></p>
+          <h2 class="catalog__head-heading">Каталог кофейных<br>напитков</h2>
+          <p class="catalog__head-name">Каталог</p>
         </div>
         <div class="catalog__filters">
-          <div class="catalog__filters-price"></div>
-          <div class="catalog__filters-milk"></div>
-          <div class="catalog__filters-country"></div>
+          <div class="catalog__filters-price">
+            <div class="catalog__filters-range">
+              <div class="catalog__filters-range-controls">
+                <div class="catalog__filters-range-scale">
+                  <div class="catalog__filters-range-bar" style="width: 60%;"></div>
+                </div>
+                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--min" tabindex="0"></div>
+                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--max" tabindex="0"style="left: 60%;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog__filters-milk">Наличие молока</div>
+          <div class="catalog__filters-country">Страна произрастания</div>
           <div class="catalog__filters-buttons">
-            <button class="button catalog__filters-button" type="button"></button>
-            <button class="button catalog__filters-button" type="button"></button>
+            <button class="button catalog__filters-button" type="button">Применить фильтр</button>
+            <button class="button catalog__filters-button" type="button">Сбросить фильтр</button>
           </div>
         </div>
         <div class="catalog__products">
-          <div class="catalog__products-sorting"></div>
+          <div class="catalog__products-sorting">Сортировка:</div>
           <div class="catalog__products-list">
-            <div class="catalog__products-item"></div>
+            <div class="catalog__products-item">Декаф Флэт Уайт</div>
           </div>
-          <div class="catalog__pagination"></div>
+          <div class="catalog__pagination">
+            < 1 2 3>
+          </div>
         </div>
       </div>
     </section>

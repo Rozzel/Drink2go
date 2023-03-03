@@ -1,7 +1,8 @@
 @mixin font($font, $src, $font-weight: normal, $font-style: normal) {
   font-family: "#{$font}";
   src: url("../fonts/#{$src}.woff2") format("woff2"),
-    url("../fonts/#{$src}.woff") format("woff");
+  url("../fonts/#{$src}.woff") format("woff");
+
   font: {
     weight: $font-weight;
     style: $font-style;
@@ -16,6 +17,7 @@
     weight: normal;
     size: 15px;
   }
+
   line-height: 24px;
   color: $color__base--black;
 }
@@ -25,6 +27,7 @@
     weight: $font-weight;
     size: $font-size;
   }
+
   line-height: $line-height;
   color: $color;
 }
@@ -40,22 +43,38 @@
 @mixin indent($list: default) {
   margin: 0;
   padding: 0;
-  @if ($list == "list") {
+
+  @if ($list =="list") {
     list-style-type: none;
   }
 }
 
 @mixin size-width($size, $padding, $max: default) {
-  @if $max == "default" {
+  @if $max =="default" {
     width: $size;
   }
-  @if $max == "max" {
+
+  @if $max =="max" {
     max-width: $size;
   }
+
   padding: 0 $padding;
 }
 
 @mixin size($width, $height: $width) {
   width: #{$width}px;
   height: #{$height}px;
+}
+
+@mixin filter-range($color) {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

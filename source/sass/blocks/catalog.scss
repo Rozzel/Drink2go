@@ -1,46 +1,138 @@
 .catalog {
+    @include indent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 52px;
+    background-color: $color__bg--lightest-grey;
 }
 
 .catalog__wrapper {
+    @include size-width($mobile-size, $mobile-indent, max);
 }
 
 .catalog__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .catalog__head-heading {
+    @include indent;
+    @include font-text(700, 24px, 36px);
+    order: 2;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .catalog__head-name {
+    @include indent;
+    @include font-text(700, 12px, 18px);
+    order: 1;
+    text-transform: uppercase;
+    color: $color__base--primary;
+    margin-bottom: 4px;
 }
 
-.catalog__filters {
+// ------------------------
+
+.catalog__filters-range-controls {
+    position: relative;
+    margin-bottom: 32px;
 }
 
-.catalog__filters-price {
+.catalog__filters-range-scale {
+    height: 2px;
+    background: $color__alt--light-grey;
 }
 
-.catalog__filters-milk {
+.catalog__filters-range-bar {
+    width: inherit;
+    height: 4px;
+    background: $color__alt--primary-lighter;
+
+    &--disabled {
+        background: $color__base--grey;
+    }
 }
 
-.catalog__filters-country {
+.catalog__filters-range-toggle {
+    position: absolute;
+    top: -13px;
+    width: 24px;
+    height: 24px;
+    background: $color__base--white;
+    border: 2px solid $color__alt--primary-lighter;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            @include filter-range($color__alt--primary-opacity);
+        }
+    }
+
+    &:active::after {
+        @include filter-range($color__base--primary);
+    }
+
+    &--min {
+        left: 0;
+    }
+
+    &--max {
+        left: inherit;
+    }
+
+    &--disabled {
+        border-color: $color__base--grey;
+        &:hover,
+        &:focus {
+            &::after {
+                content: none;
+            }
+        }
+    }
 }
 
-.catalog__filters-buttons {
-}
 
-.catalog__filters-button {
-}
+// ------------------------
 
-.catalog__products {
-}
 
-.catalog__products-sorting {
-}
-.catalog__products-list {
-}
+// .catalog__filters {
+// }
 
-.catalog__products-item {
-}
+// .catalog__filters-price {
+// }
 
-.catalog__pagination {
-}
+// .catalog__filters-milk {
+// }
+
+// .catalog__filters-country {
+// }
+
+// .catalog__filters-buttons {
+// }
+
+// .catalog__filters-button {
+// }
+
+// .catalog__products {
+// }
+
+// .catalog__products-sorting {
+// }
+// .catalog__products-list {
+// }
+
+// .catalog__products-item {
+// }
+
+// .catalog__pagination {
+// }
