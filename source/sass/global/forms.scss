@@ -41,7 +41,8 @@
             @include filter-point-action($color__alt--primary-opacity);
         }
     }
-// FIXME подумать как сгруппировать код
+
+    // FIXME подумать как сгруппировать код
     &:active::after {
         @include filter-point-action($color__base--primary);
     }
@@ -80,10 +81,15 @@
 }
 
 .forms__group-inputs {
+    @include indent;
+    display: flex;
+    flex-direction: column;
+    border: none;
     position: relative;
 }
 
-.forms__input[type="radio"] {
+.forms__input[type="radio"],
+.forms__input[type="checkbox"] {
     @include visually-hidden;
 }
 
@@ -119,4 +125,19 @@
     border-radius: 50%;
     position: absolute;
     left: 5px;
+}
+
+.forms__input[type="checkbox"]+.forms__input-label::before {
+    @include size(24);
+    position: absolute;
+    content: "";
+    background-color: $color__base--grey;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-left: -35px;
+}
+// TODO here
+.forms__input[type="checkbox"]:checked+.forms__input-label::before {
+    border-color: $color__base--primary;
 }

@@ -46,7 +46,7 @@
     margin-bottom: 24px;
 }
 
-.catalog__filters-price-name {
+.catalog__filters-legend {
     @include indent;
     @include font-text(600, 16px, 24px);
     margin-bottom: 22px;
@@ -77,7 +77,9 @@
   }
 }
 
-// .catalog__filters-milk
+.catalog__filters-milk {
+    margin-bottom: 22px
+}
 
 .catalog__filters-milk-name {
   @include indent;
@@ -85,19 +87,9 @@
   margin-bottom: 22px
 }
 
-.catalog__filters-milk-radios {
-    @include indent;
-    display: flex;
-    flex-direction: column;
-    border: none;
+.catalog__filters-country {
+    margin-bottom: 33px;
 }
-
-.catalog__filters-milk-input {
-    // @include  visually-hidden;
-}
-
-// .catalog__filters-country {
-// }
 
 // .catalog__filters-buttons {
 // }
