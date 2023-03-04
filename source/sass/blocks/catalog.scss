@@ -1,62 +1,64 @@
 .catalog {
-    @include indent;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 52px;
-    background-color: $color__bg--lightest-grey;
+  @include indent;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 52px;
+  background-color: $color__bg--lightest-grey;
 }
 
 .catalog__wrapper {
-    @include size-width($mobile-size, $mobile-indent, max);
+  @include size-width($mobile-size, $mobile-indent, max);
 }
 
 .catalog__head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .catalog__head-heading {
-    @include indent;
-    @include font-text(700, 24px, 36px);
-    order: 2;
-    text-align: center;
-    margin-bottom: 20px;
+  @include indent;
+  @include font-text(700, 24px, 36px);
+  order: 2;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .catalog__head-name {
-    @include indent;
-    @include font-text(700, 12px, 18px);
-    order: 1;
-    text-transform: uppercase;
-    color: $color__base--primary;
-    margin-bottom: 4px;
+  @include indent;
+  @include font-text(700, 12px, 18px);
+  order: 1;
+  text-transform: uppercase;
+  color: $color__base--primary;
+  margin-bottom: 4px;
 }
 
 .catalog__filters {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__filters-price {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
 }
 
 .catalog__filters-legend {
-    @include indent;
-    @include font-text(600, 16px, 24px);
-    margin-bottom: 22px;
+  @include indent;
+  @include font-text(600, 16px, 24px);
+  margin-bottom: 22px;
 }
 
 .catalog__filters-range-controls {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .catalog__filters-range-inputs {
+  min-width: 100%;
   @include indent;
   position: relative;
   display: flex;
@@ -69,16 +71,11 @@
     position: absolute;
     top: 50%;
     left: 48%;
-
-    @include screen-mobile {
-      left: 50%;
-    }
-
   }
 }
 
 .catalog__filters-milk {
-    margin-bottom: 22px
+  margin-bottom: 22px
 }
 
 .catalog__filters-milk-name {
@@ -88,14 +85,16 @@
 }
 
 .catalog__filters-country {
-    margin-bottom: 33px;
+  margin-bottom: 33px;
 }
 
-// .catalog__filters-buttons {
-// }
-
-// .catalog__filters-button {
-// }
+// TODO HERE
+.catalog__filters-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
 
 // .catalog__products {
 // }

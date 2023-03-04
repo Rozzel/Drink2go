@@ -15,7 +15,7 @@
 
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-    <section class="slider visually-hidden">
+    <section class="slider">
       <h2 class="visually-hidden">Новинки кофейных напитков</h2>
       <div class="slider__wrapper">
         <div class="slider__list">
@@ -40,7 +40,7 @@
                 <span class="slider__price-old">295₽</span>
                 <span class="slider__price-new">225₽</span>
               </p>
-              <button class="button slider__button">Заказать</button>
+              <button class="button button--sliderslider__button">Заказать</button>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section class="advantages visually-hidden">
+    <section class="advantages">
       <div class="wrapper advantages__wrapper">
         <h2 class="advantages__heading">
           Главные причины<br>выбрать Drink2Go</h2>
@@ -140,26 +140,27 @@
           <div class="catalog__filters-country">
             <fieldset class="forms__group-inputs">
               <legend class="catalog__filters-legend">Страна произрастания</legend>
-              <!-- TODO here -->
+
               <input class="forms__input" type="checkbox" id="country_checkbox_brazil" name="country" value="Бразилия" checked>
-              <label class="forms__input-label" for="country_checkbox_brazil">Бразилия</label>
+              <label class="forms__input-label forms__input-label--toggle" for="country_checkbox_brazil">Бразилия</label>
 
               <input class="forms__input" type="checkbox" id="country_checkbox_ethiopia" name="country" value="Эфиопия">
-              <label class="forms__input-label" for="country_checkbox_ethiopia">Эфиопия</label>
+              <label class="forms__input-label forms__input-label--toggle" for="country_checkbox_ethiopia">Эфиопия</label>
 
               <input class="forms__input" type="checkbox" id="country_checkbox_colombia" name="country" value="Колумбия">
-              <label class="forms__input-label" for="country_checkbox_colombia">Колумбия</label>
+              <label class="forms__input-label forms__input-label--toggle" for="country_checkbox_colombia">Колумбия</label>
 
               <input class="forms__input" type="checkbox" id="country_checkbox_costaRica" name="country" value="Коста-Рика">
-              <label class="forms__input-label" for="country_checkbox_costaRica">Коста-Рика</label>
+              <label class="forms__input-label forms__input-label--toggle" for="country_checkbox_costaRica">Коста-Рика</label>
 
               <input class="forms__input" type="checkbox" id="country_checkbox_peru" name="country" value="Перу">
-              <label class="forms__input-label" for="country_checkbox_peru">Перу</label>
+              <label class="forms__input-label forms__input-label--toggle" for="country_checkbox_peru">Перу</label>
             </fieldset>
           </div>
           <div class="catalog__filters-buttons">
-            <button class="button catalog__filters-button" type="submit">Применить фильтр</button>
-            <button class="button catalog__filters-button" type="button">Сбросить фильтр</button>
+            <button class="button button--additional catalog__filters-button" type="submit">Применить фильтр</button>
+            <button class="button button--additional-light catalog__filters-button" type="button">Сбросить фильтр</button>
+            <!--TODO HERE -->
           </div>
         </form>
         <div class="catalog__products">
@@ -167,9 +168,7 @@
           <div class="catalog__products-list">
             <div class="catalog__products-item">Декаф Флэт Уайт</div>
           </div>
-          <div class="catalog__pagination">
-            < 1 2 3>
-          </div>
+          <div class="catalog__pagination">1 2 3</div>
         </div>
       </div>
     </section>
