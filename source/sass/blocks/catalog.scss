@@ -53,67 +53,7 @@
 }
 
 .catalog__filters-range-controls {
-    position: relative;
     margin-bottom: 32px;
-}
-
-.catalog__filters-range-scale {
-    height: 2px;
-    background: $color__alt--light-grey;
-}
-
-.catalog__filters-range-bar {
-    width: inherit;
-    height: 4px;
-    background: $color__alt--primary-lighter;
-
-    &--disabled {
-        background: $color__base--grey;
-    }
-}
-
-.catalog__filters-range-toggle {
-    position: absolute;
-    top: -13px;
-    width: 24px;
-    height: 24px;
-    background: $color__base--white;
-    border: 2px solid $color__alt--primary-lighter;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &:focus {
-        outline: none;
-    }
-
-    &:hover,
-    &:focus {
-        &::after {
-            @include filter-range($color__alt--primary-opacity);
-        }
-    }
-
-    &:active::after {
-        @include filter-range($color__base--primary);
-    }
-
-    &--min {
-        left: 0;
-    }
-
-    &--max {
-        left: inherit;
-    }
-
-    &--disabled {
-        border-color: $color__base--grey;
-        &:hover,
-        &:focus {
-            &::after {
-                content: none;
-            }
-        }
-    }
 }
 
 .catalog__filters-range-inputs {
@@ -137,27 +77,23 @@
   }
 }
 
-.catalog__filters-range-input {
-  @include font-text(500, 16px, 24px);
-  @include size(118, 38);
-  text-align: center;
-  background-color: $color__base--white;
-  border: 2px solid $color__alt--primary-lighter;
-border-radius: 4px;
-
-  &::placeholder {
-    color: $color__base--grey;
-  }
-}
 // .catalog__filters-milk
 
 .catalog__filters-milk-name {
   @include indent;
   @include font-text(600, 16px, 24px);
+  margin-bottom: 22px
 }
 
 .catalog__filters-milk-radios {
-  // TODO  остановился тут
+    @include indent;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.catalog__filters-milk-input {
+    // @include  visually-hidden;
 }
 
 // .catalog__filters-country {

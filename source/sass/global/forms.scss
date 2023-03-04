@@ -1,0 +1,122 @@
+.forms {
+    @include indent;
+}
+
+.forms__range {
+    position: relative;
+}
+
+.forms__range-scale {
+    height: 2px;
+    background: $color__alt--light-grey;
+}
+
+.forms__range-bar {
+    width: inherit;
+    height: 4px;
+    background: $color__alt--primary-lighter;
+
+    &--disabled {
+        background: $color__base--grey;
+    }
+}
+
+.forms__range-toggle {
+    position: absolute;
+    top: -13px;
+    width: 24px;
+    height: 24px;
+    background-color: $color__base--white;
+    border: 2px solid $color__alt--primary-lighter;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:focus {
+        &::after {
+            @include filter-point-action($color__alt--primary-opacity);
+        }
+    }
+// FIXME подумать как сгруппировать код
+    &:active::after {
+        @include filter-point-action($color__base--primary);
+    }
+
+    &--min {
+        left: 0;
+    }
+
+    &--max {
+        left: inherit;
+    }
+
+    &--disabled {
+        border-color: $color__base--grey;
+
+        &:hover,
+        &:focus {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+.forms__range-input {
+    @include font-text(500, 16px, 24px);
+    @include size(118, 38);
+    text-align: center;
+    background-color: $color__base--white;
+    border: 2px solid $color__alt--primary-lighter;
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $color__base--grey;
+    }
+}
+
+.forms__group-inputs {
+    position: relative;
+}
+
+.forms__input[type="radio"] {
+    @include visually-hidden;
+}
+
+.forms__input-label {
+    @include indent;
+    @include font-text(400, 16px, 24px);
+    margin-left: 35px;
+    margin-bottom: 22px;
+    cursor: pointer;
+}
+
+.forms__input[type="radio"]+.forms__input-label::before {
+    @include size(24);
+    position: absolute;
+    content: "";
+    background-color: $color__base--white;
+    border: 2px solid $color__base--grey;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+    margin-left: -35px;
+}
+
+.forms__input[type="radio"]:checked+.forms__input-label::before {
+    border-color: $color__base--primary;
+}
+
+.forms__input[type="radio"]:checked+.forms__input-label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $color__base--primary;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+}

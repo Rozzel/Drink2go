@@ -103,27 +103,37 @@
           <h2 class="catalog__head-heading">Каталог кофейных<br>напитков</h2>
           <p class="catalog__head-name">Каталог</p>
         </div>
-        <form class="catalog__filters">
+        <form class="forms catalog__filters">
           <div class="catalog__filters-price">
             <p class="catalog__filters-price-name">Цена</p>
-            <div class="catalog__filters-range">
+            <div class="forms__range catalog__filters-range">
               <div class="catalog__filters-range-controls">
-                <div class="catalog__filters-range-scale">
-                  <div class="catalog__filters-range-bar" style="width: 80%;"></div>
+                <div class="forms__range-scale">
+                  <div class="forms__range-bar" style="width: 80%;"></div>
                 </div>
-                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--min" tabindex="0"></div>
-                <div class="catalog__filters-range-toggle catalog__filters-range-toggle--max" tabindex="0"style="left: 80%;"></div>
+                <div class="forms__range-toggle forms__range-toggle--min" tabindex="0"></div>
+                <div class="forms__range-toggle forms__range-toggle--max" tabindex="0"style="left: 80%;"></div>
               </div>
               <div class="catalog__filters-range-inputs">
-                <input class="catalog__filters-range-input" type="number" placeholder="0">
-                <input class="catalog__filters-range-input" type="number" placeholder="1000" value="900">
+                <input class="forms__range-input" type="number" placeholder="0">
+                <input class="forms__range-input" type="number" placeholder="1000" value="900">
               </div>
             </div>
           </div>
           <div class="catalog__filters-milk">
             <p class="catalog__filters-milk-name">Наличие молока</p>
-            <fieldset class="catalog__filters-milk-radios">
-              <!-- TODO  остановился тут -->
+            <fieldset class="forms__group-inputs catalog__filters-milk-radios">
+              <input class="forms__input" type="radio" id="milk_radios_whatever" name="milk_radios" value="Неважно">
+              <label class="forms__input-label" for="milk_radios_whatever">Неважно</label>
+
+              <input class="forms__input" type="radio" id="milk_radios_animal" name="milk_radios" value="Неважно">
+              <label class="forms__input-label" for="milk_radios_animal">Только животное</label>
+
+              <input class="forms__input" type="radio" id="milk_radios_vegetable" name="milk_radios" value="Неважно">
+              <label class="forms__input-label" for="milk_radios_vegetable">Только растительное</label>
+
+              <input class="forms__input" type="radio" id="milk_radios_noMilk" name="milk_radios" value="Неважно">
+              <label class="forms__input-label" for="milk_radios_noMilk">Без молока</label>
             </fieldset>
           </div>
           <div class="catalog__filters-country">Страна произрастания</div>
