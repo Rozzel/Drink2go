@@ -9,4 +9,11 @@
 @font-face {
   @include font($font-name, $font-url--bold, 700);
 }
-// FIXME 500, 800
+
+@font-face {
+  @include font($font-name, $font-url--medium, 500);
+}
+
+@font-face {
+  @include font($font-name, $font-url--extrabold, 800);
+}
