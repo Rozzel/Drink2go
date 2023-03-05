@@ -37,7 +37,10 @@ export function processMarkup() {
         makePicture: makePicture
       },
     }))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true
+      }))
     .pipe(gulp.dest('build'));
 }
 
