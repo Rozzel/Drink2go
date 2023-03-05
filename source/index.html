@@ -15,7 +15,7 @@
 
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-    <section class="slider">
+    <section class="slider visually-hidden">
       <h2 class="visually-hidden">Новинки кофейных напитков</h2>
       <div class="slider__wrapper">
         <div class="slider__list">
@@ -51,7 +51,7 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages visually-hidden">
       <div class="wrapper advantages__wrapper">
         <h2 class="advantages__heading">
           Главные причины<br>выбрать Drink2Go</h2>
@@ -160,11 +160,18 @@
           <div class="catalog__filters-buttons">
             <button class="button button--additional catalog__filters-button" type="submit">Применить фильтр</button>
             <button class="button button--additional-light catalog__filters-button" type="button">Сбросить фильтр</button>
-            <!--TODO HERE -->
           </div>
         </form>
         <div class="catalog__products">
-          <div class="catalog__products-sorting">Сортировка:</div>
+          <form class="catalog__products-sorting" action="#">
+            <label class="catalog__products-label for="catalog__products-select">Сортировка:</label>
+            <select class="catalog__products-select" id="catalog__products-select" name="products-sorting">
+              <option value="по умолчанию" selected>по умолчанию</option>
+              <option value="сначала дорогие">сначала дорогие</option>
+              <option value="сначала дешёвые" >сначала дешёвые</option>
+              <option value="высокий рейтинг">высокий рейтинг</option>
+            </select>
+          </form>
           <div class="catalog__products-list">
             <div class="catalog__products-item">Декаф Флэт Уайт</div>
           </div>

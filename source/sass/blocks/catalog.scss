@@ -1,8 +1,7 @@
 .catalog {
   @include indent;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 52px;
@@ -10,7 +9,7 @@
 }
 
 .catalog__wrapper {
-  @include size-width($mobile-size, $mobile-indent, max);
+  @include size-width($mobile-size, $mobile-indent);
 }
 
 .catalog__head {
@@ -61,6 +60,7 @@
 
 .catalog__filters-range-controls {
   margin-bottom: 32px;
+  flex: 1;
 }
 
 .catalog__filters-range-inputs {
@@ -94,9 +94,8 @@
   margin-bottom: 33px;
 }
 
-// TODO HERE
 .catalog__filters-buttons {
-  // display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
