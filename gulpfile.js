@@ -15,6 +15,7 @@ import { stacksvg } from "gulp-stacksvg";
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
+// import htmFunction from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
 const date = new Date();
