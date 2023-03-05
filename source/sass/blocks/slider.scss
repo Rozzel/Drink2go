@@ -23,12 +23,12 @@
   align-items: center;
 }
 
-.slider__img {
+.slider__picture {
   margin-bottom: 10px;
 }
 
-.slider__img img {
-  @include size(280);
+.slider__img {
+  @include indent;
 }
 
 .slider__new {
