@@ -1,7 +1,16 @@
 /* GLOBAL */
 @import "global/variables";
-@import "global/global";
+@import "global/mixins";
 @import "global/fonts";
+@import "global/global";
+@import "global/page";
+@import "global/button";
+@import "global/forms";
 
 /* BLOCKS */
 @import "blocks/header";
+@import "blocks/footer";
+@import "blocks/advantages";
+@import "blocks/slider";
+@import "blocks/catalog";
+@import "blocks/map";

@@ -1,0 +1,35 @@
+.button {
+  @include font-text(400, 16px, 24px, $color__base--white);
+  @include indent;
+  background-color: $color__base--primary;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--slider {
+    padding: 8px 20px;
+  }
+
+  &--additional {
+    @include font-text(400, 13px, 24px, $color__base--white);
+    padding: 10px 14px;
+  }
+
+  &--additional-light {
+    @include font-text(400, 14px, 24px, $color__base--primary);
+    padding: 10px 14px;
+    background-color: $color__base--white;
+  }
+
+  &--basket {
+    padding: 8px 20px 8px 46px;
+    background-image: url(../../img/forms/basket.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+  }
+}

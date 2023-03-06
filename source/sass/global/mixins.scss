@@ -1,0 +1,92 @@
+@mixin font($font, $src, $font-weight: normal, $font-style: normal) {
+  font-family: "#{$font}";
+  src: url("../../fonts/#{$src}.woff2") format("woff2"),
+  url("../../fonts/#{$src}.woff") format("woff");
+
+  font: {
+    weight: $font-weight;
+    style: $font-style;
+    display: swap;
+  }
+}
+
+@mixin font-global($font) {
+  font: {
+    family: $font, $specify-families;
+    style: normal;
+    weight: normal;
+    size: 15px;
+  }
+
+  line-height: 24px;
+  color: $color__base--black;
+}
+
+@mixin font-text($font-weight: inherit, $font-size: inherit, $line-height: inherit, $color: inherit) {
+  font: {
+    weight: $font-weight;
+    size: $font-size;
+  }
+
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+@mixin indent($list: default) {
+  margin: 0;
+  padding: 0;
+
+  @if ($list =="list") {
+    list-style-type: none;
+  }
+}
+
+@mixin size-width($size, $padding, $max: default) {
+  @if $max =="default" {
+    width: $size;
+  }
+
+  @if $max =="max" {
+    max-width: $size;
+  }
+
+  padding: 0 $padding;
+}
+
+@mixin size($width, $height: $width) {
+  width: #{$width}px;
+  height: #{$height}px;
+}
+
+@mixin filter-point-action($color) {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin screen-tablet {
+  @media screen and (min-width: $tablet-width) {
+      @content;
+  }
+}
+
+@mixin screen-desktop {
+  @media screen and (min-width: $desktop-width) {
+      @content;
+  }
+}

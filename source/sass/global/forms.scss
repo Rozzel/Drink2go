@@ -1,0 +1,185 @@
+.forms {
+  @include indent;
+}
+
+.forms__range {
+  position: relative;
+}
+
+.forms__range-scale {
+  height: 2px;
+  background: $color__alt--light-grey;
+}
+
+.forms__range-bar {
+  width: inherit;
+  height: 4px;
+  background: $color__alt--primary-lighter;
+
+  &--disabled {
+    background: $color__base--grey;
+  }
+}
+
+.forms__range-toggle {
+  position: absolute;
+  top: -13px;
+  width: 24px;
+  height: 24px;
+  background-color: $color__base--white;
+  border: 2px solid $color__alt--primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      @include filter-point-action($color__alt--primary-opacity);
+    }
+  }
+
+  // FIXME подумать как сгруппировать код
+  &:active::after {
+    @include filter-point-action($color__base--primary);
+  }
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    left: inherit;
+  }
+
+  &--disabled {
+    border-color: $color__base--grey;
+
+    &:hover,
+    &:focus {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.forms__range-input {
+  @include font-text(500, 16px, 24px);
+  @include size(118, 38);
+  text-align: center;
+  background-color: $color__base--white;
+  border: 2px solid $color__alt--primary-lighter;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $color__base--grey;
+  }
+}
+
+.forms__group-inputs {
+  @include indent;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  position: relative;
+}
+
+.forms__input[type="radio"],
+.forms__input[type="checkbox"] {
+  @include visually-hidden;
+}
+
+.forms__input-label {
+  @include indent;
+  @include font-text(400, 16px, 24px);
+  margin-left: 35px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  &--toggle {
+    margin-left: 60px;
+  }
+}
+
+.forms__input[type="radio"]+.forms__input-label::before {
+  @include size(24);
+  position: absolute;
+  content: "";
+  background-color: $color__base--white;
+  border: 2px solid $color__base--grey;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px;
+  margin-left: -35px;
+  transition: 0.4s;
+}
+
+.forms__input[type="radio"]:checked+.forms__input-label::before {
+  border-color: $color__base--primary;
+  transition: 0.4s;
+}
+
+.forms__input[type="radio"]:checked+.forms__input-label::after {
+  @include size(18);
+  content: "";
+  background-color: $color__base--primary;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+}
+
+.forms__input[type="checkbox"]+.forms__input-label::before {
+  @include size(42, 24);
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  background-color: $color__base--grey;
+  border-radius: 12px;
+  margin-top: -2px;
+  margin-left: -60px;
+  transition: 0.4s;
+}
+
+.forms__input[type="checkbox"]:checked+.forms__input-label::before {
+  background-color: $color__base--primary;
+  transition: 0.4s;
+}
+
+.forms__input[type="checkbox"]+.forms__input-label::after {
+  @include size(20);
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  background-color: $color__base--white;
+  border-radius: 50%;
+  left: 2px;
+  transition: 0.4s;
+}
+
+.forms__input[type="checkbox"]:checked+.forms__input-label::after {
+  transform: translateX(18px);
+  transition: 0.4s;
+}
+
+.forms__select {
+  @include indent;
+  @include font-text(600, 16px, 24px, $color__base--primary);
+  border: none;
+  padding: 4px 10px;
+  appearance: none;
+  background: url("../../img/forms/select-arrow.svg") no-repeat right center;
+  background-size: 10px;
+  padding-right: 10px;
+
+  &:focus {
+    outline: none;
+    background: url("../../img/forms/select-arrow--90deg.svg") no-repeat right center;
+  }
+}
