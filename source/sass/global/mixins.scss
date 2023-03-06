@@ -79,8 +79,14 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin screen-mobile {
-  @media screen and (min-width: $mobile-size) {
+@mixin screen-tablet {
+  @media screen and (min-width: $tablet-width) {
+      @content;
+  }
+}
+
+@mixin screen-desktop {
+  @media screen and (min-width: $desktop-width) {
       @content;
   }
 }

@@ -4,4 +4,10 @@
 
 .br {
   display: inline;
+
+  &--tablet-off {
+    @include screen-tablet {
+      display: none;
+    }
+  }
 }
