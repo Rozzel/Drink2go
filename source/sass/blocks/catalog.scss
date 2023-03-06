@@ -140,6 +140,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  margin-bottom: 24px;
 }
 
 .catalog__products-item-img {
@@ -171,5 +172,27 @@
 .catalog__pagination {
   @include indent(list);
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.catalog__pagination-item {
+  @include size(40);
+  @include font-text(400, 16px, 24px, $color__base--primary);
+  border-radius: 10%;
+  background-color: $color__base--white;
+  text-align: center;
+  line-height: 40px;
+
+  &--active {
+    @include font-text(600, inherit, 24px, $color__base--black);
+    line-height: 40px;
+    background: none;
+  }
+}
+
+.catalog__pagination-item svg {
+  fill: $color__base--primary;
 }
