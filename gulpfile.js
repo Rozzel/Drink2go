@@ -104,6 +104,7 @@ export function createStack() {
 
 export function copyAssets() {
   return gulp.src([
+    'source/leaflet/**/*',
     'source/fonts/**/*.{woff2,woff}',
     'source/*.ico',
     'source/*.webmanifest',

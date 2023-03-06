@@ -12,6 +12,7 @@
   <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-extrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
   <link rel="stylesheet" href="css/style.css?v=cache">
 </head>
 
@@ -206,7 +207,7 @@
             <li class="catalog__pagination-item">3</li>
             <li class="catalog__pagination-item">
               <svg width="6" height="10" viewBox="0 0 6 10">
-                <path fill-rule="evenodd" d="M1.192 0 0 1.239 3.617 5 0 8.761 1.192 10 6 5 1.192 0Z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd" d="M1.192 0 0 1.239 3.617 5 0 8.761 1.192 10 6 5 1.192 0Z" clip-rule="evenodd" />
               </svg>
             </li>
           </ul>
@@ -214,9 +215,31 @@
       </div>
     </section>
 
+    <section class="map">
+      <div class="map__wrapper">
+        <div class="map_leaflet" id="mapid"></div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer page__footer">Подвал</footer>
+
+  <script src="leaflet/leaflet.js"></script>
+  <script>
+    const map = L.map('mapid').setView([59.968381, 30.317531], 18);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    const pin = L.marker([59.968381, 30.317531], {
+      icon: L.icon({
+        iconUrl: 'img/map/pin.svg',
+        iconSize: [38, 50],
+      })
+    }).addTo(map);
+  </script>
 
   <script src="./js/script.js?v=cache" defer></script>
 </body>
